@@ -1,0 +1,10 @@
+<div class="content">
+  <div class="card box-shadow" *ngFor="let article of articles">
+    <img class="img" src="assets/img/article_default.png" >
+    <div class="info">
+      <a class="title blue-select" href="/articles/{{ article._id }}"> {{ article.title }} </a>
+      <p class="description"> {{ article.description }} </p>
+    </div>
+  </div>
+</div>
+  

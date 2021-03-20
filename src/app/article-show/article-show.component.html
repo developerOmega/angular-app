@@ -1,0 +1,15 @@
+<div class="content">
+  <h2 class="title black"> {{ article.title }} </h2>
+
+  <div class="features">
+    <img class="img-user" src="assets/img/user_default.png" >
+    <p class="name-user black"> {{ article.user.name }} </p>
+    <p class="date black"> {{ article.created_at | date }} </p>
+  </div>
+
+  <img class="img" src="assets/img/article_default.png">
+  
+  <div class="text box-shadow black">
+    {{ article.content }}
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.article {
+  padding: 1rem;
+  border-radius: .4rem;
+}
+
+.title{
+  font-size: 1.2rem;
+  font-weight: 600;
+}

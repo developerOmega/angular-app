@@ -1,0 +1,45 @@
+.content {
+  height: 80vh;
+  display: grid;
+  align-items: center;
+}
+
+.content .form {
+  width: 100%;
+  max-width: 40rem;
+  margin: auto;
+  padding: 2rem;
+  border-radius: .3rem;
+}
+
+.content .form .title {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.content .form .field {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.content .form .field input {
+  padding: .5rem;
+  border: 1px solid #cccccc;
+  border-radius: .3rem;
+}
+
+.content .form .btn {
+  width: 100%;
+  padding: .5rem;
+  border: none;
+  color: #ffffff;
+  background: #14ABDC;
+}
+
+.content .form .btn:hover {
+  cursor: pointer;
+  background: rgba(20, 171, 220, .5);
+}

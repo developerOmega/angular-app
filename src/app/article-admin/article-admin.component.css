@@ -1,0 +1,81 @@
+.content {
+  width: 100%;
+  display: grid;
+  gap: 3rem;
+  grid-template-areas: 'title   title   title   title'
+                       'form    form    form    articles';
+}
+
+.title {
+  grid-area: title;
+}
+
+.form {
+  width: 100%;
+  grid-area: form;
+  padding: 1rem;
+  border-radius: .4rem;
+  display: block;
+}
+
+.form .field {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.form .field input, .form .field textarea{
+  padding: .5rem;
+  border: 1px solid #cccccc;
+  border-radius: .3rem;
+}
+
+.form .field textarea {
+  resize: none;
+}
+
+.form .field textarea.min-10 {
+  min-height: 10rem;
+}
+
+.form .field textarea.min-5 {
+  min-height: 5rem;
+}
+
+.btn {
+  width: 100%;
+  padding: .5rem;
+  border: none;
+  color: #ffffff;
+  background: #14ABDC;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: rgba(20, 171, 220, .5);
+}
+
+.btn.danger {
+  background: #FF3030;
+}
+
+.btn.danger:hover {
+  background: rgba(255 , 48, 48, .8);
+}
+
+
+.btn.success {
+  background: #0DD207;
+}
+
+.btn.success:hover {
+  background: rgba(13 , 210, 7, .8);
+}
+
+.articles {
+  grid-area: articles;
+  display: grid;
+  gap: 1rem;
+  max-width: 25rem;
+}

@@ -1,0 +1,52 @@
+<div class='content'>
+  
+  <h2 class="title"> Articulos </h2>
+
+  <form class="form box-shadow" action="/" method="POST" (ngSubmit)="createOrEditArticle()">
+    <div class=field>
+      <label for="title"> Add Title </label>
+      <input type="text" id="title" [(ngModel)]="selectArticle.title" name="title" placeholder="Title">
+    </div>
+
+    <div class="field">
+      <label for="description"> Add Description </label>
+      <textarea class="min-5" name="description" id="description" [(ngModel)]="selectArticle.description" placeholder="Description"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="content"> Add Content </label>
+      <textarea class="min-10" name="content" id="content" [(ngModel)]="selectArticle.content" placeholder="content"></textarea>
+    </div>
+
+    <button class="btn" type="submit" > Save </button>
+    <button 
+      class="btn danger" 
+      type="button" 
+      *ngIf="selectArticle._id != 0" 
+      (click)="deleteAricle()" 
+    > 
+      Delete 
+    </button>
+
+    <button 
+      class="btn success" 
+      type="button" 
+      *ngIf="selectArticle._id != 0"
+      (click)="cleanSelectArticle()" 
+    > 
+      New 
+    </button>
+  </form>
+
+
+  <div class="articles">
+    <button 
+      class="btn box-shadow" 
+      *ngFor="let article of articles"
+      (click)="openForEdit(article)"
+      [class.active] = "article == selectArticle"
+    >
+      <app-article-tag [article]="article" ></app-article-tag>
+    </button>
+  </div>
+</div>

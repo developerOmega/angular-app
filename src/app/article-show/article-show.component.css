@@ -1,0 +1,38 @@
+.content {
+  width: 100%;;
+}
+
+.content .title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.content .features .img-user {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.content .features .name-user {
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+.content .features .date {
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+.content .img {
+  width: 100%;
+  display: block;
+  border-radius: .3rem;
+}
+
+.content .text {
+  margin: 3rem 2rem;
+  padding: 1rem;
+  border-radius: .3rem;
+}

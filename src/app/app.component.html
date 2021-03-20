@@ -1,0 +1,47 @@
+
+<!-- Toolbar -->
+
+<div class="container">
+  <header class="header box-shadow" role="banner">
+    <a href="/" class="logo black">
+      btec-app
+    </a>
+
+    <div *ngIf="!existToken(); else elseToken">
+      <a href="/user/login" class="blue-select"> Log in </a>
+    </div>
+    <ng-template #elseToken>
+      <form action="/" method="POST" (ngSubmit)="deleteSession()"  >
+        <button class="btn blue-select" type="submit">
+          Log out
+        </button>
+      </form>
+    </ng-template>
+  </header>
+
+  <div class="main">
+    <router-outlet></router-outlet>
+  </div>
+    
+  
+    <!-- Footer -->
+  <footer class='footer black-bg box-shadow'>
+    <a href="/" class="logo  white">
+      btec-app
+    </a>
+    <div class="by white"> 
+      by Daniel Mendoza
+    </div>
+  </footer>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
