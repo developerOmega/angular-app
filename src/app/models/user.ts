@@ -1,3 +1,4 @@
+// Clase de user
 export class User {
   _id: number = 0;
   name: string = "";

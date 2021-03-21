@@ -1,5 +1,6 @@
 import { User } from './user';
 
+// Clase de artículos
 export class Article {
   _id: number = 0;
   title: string = "";
