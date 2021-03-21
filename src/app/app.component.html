@@ -2,11 +2,13 @@
 <!-- Toolbar -->
 
 <div class="container">
+  <!-- Header -->
   <header class="header box-shadow" role="banner">
     <a href="/" class="logo black">
       btec-app
     </a>
 
+    <!-- Contenido de login / logout -->
     <div *ngIf="!existToken(); else elseToken">
       <a href="/user/login" class="blue-select"> Log in </a>
     </div>
@@ -19,12 +21,13 @@
     </ng-template>
   </header>
 
+  <!-- Contenido principal -->
   <div class="main">
     <router-outlet></router-outlet>
   </div>
     
   
-    <!-- Footer -->
+  <!-- Footer -->
   <footer class='footer black-bg box-shadow'>
     <a href="/" class="logo  white">
       btec-app
