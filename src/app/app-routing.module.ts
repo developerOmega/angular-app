@@ -7,15 +7,22 @@ import { ArticlesComponent } from './articles/articles.component';
 import Cookie from '../assets/cookies';
 
 const routes: Routes = [
+  // Ruta main
   {path: '', component: ArticlesComponent},
+  // Ruta de artículos
   {path: 'articles', component: ArticlesComponent},
+  // Ruta de artículos por id
   {path: 'articles/:id', component: ArticleShowComponent},
+  // Ruta de login
+  // Redireccionar a ruta user/articles sí el la cookie token existe (usuario autenticado) 
   {
-    path: 'user/login', 
+    path: 'user/login',
     redirectTo: !Cookie.getCookie('token') ? undefined : 'user/articles',
     component: !Cookie.getCookie('token') ? AdminLoginComponent : undefined,
     pathMatch: 'full'
   },
+  // Ruta de artículos de administración
+  // Redireccionar a ruta user/login sí el la cookie token no existe (usuario no autenticado)
   {
     path: 'user/articles', 
     redirectTo: !Cookie.getCookie('token') ? 'user/login' : undefined,  

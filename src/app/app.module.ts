@@ -7,9 +7,6 @@ import { AppComponent } from './app.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { ArticleShowComponent } from './article-show/article-show.component';
 import { ArticleAdminComponent } from './article-admin/article-admin.component';
-import { ArticleAdminShowComponent } from './article-admin-show/article-admin-show.component';
-import { ArticleAdminNewComponent } from './article-admin-new/article-admin-new.component';
-import { ArticleAdminEditComponent } from './article-admin-edit/article-admin-edit.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ArticleTagComponent } from './tags/article-tag/article-tag.component';
 
@@ -19,9 +16,6 @@ import { ArticleTagComponent } from './tags/article-tag/article-tag.component';
     ArticlesComponent,
     ArticleShowComponent,
     ArticleAdminComponent,
-    ArticleAdminShowComponent,
-    ArticleAdminNewComponent,
-    ArticleAdminEditComponent,
     AdminLoginComponent,
     ArticleTagComponent,
   ],
