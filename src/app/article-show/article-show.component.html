@@ -1,14 +1,18 @@
 <div class="content">
+  <!-- Titulo -->
   <h2 class="title black"> {{ article.title }} </h2>
 
+  <!-- Contenido que muestra la información del autor -->
   <div class="features">
     <img class="img-user" src="assets/img/user_default.png" >
     <p class="name-user black"> {{ article.user.name }} </p>
     <p class="date black"> {{ article.created_at | date }} </p>
   </div>
-
+  
+  <!-- Contenido que muestra la imagen del artículo -->
   <img class="img" src="assets/img/article_default.png">
   
+  <!-- Contenido que muestra el contenido del artículo -->
   <div class="text box-shadow black">
     {{ article.content }}
   </div>

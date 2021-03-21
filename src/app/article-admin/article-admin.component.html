@@ -1,25 +1,33 @@
 <div class='content'>
   
+  <!-- Titulo -->
   <h2 class="title"> Articulos </h2>
 
+  <!-- Formulario -->
   <form class="form box-shadow" action="/" method="POST" (ngSubmit)="createOrEditArticle()">
+    
+    <!-- Contenido para agregar título -->
     <div class=field>
       <label for="title"> Add Title </label>
       <input type="text" id="title" [(ngModel)]="selectArticle.title" name="title" placeholder="Title">
     </div>
 
+    <!-- Contenido para agregar descripcion -->
     <div class="field">
       <label for="description"> Add Description </label>
       <textarea class="min-5" name="description" id="description" [(ngModel)]="selectArticle.description" placeholder="Description"></textarea>
     </div>
 
+    <!-- Contenido para agregar contenido -->
     <div class="field">
       <label for="content"> Add Content </label>
       <textarea class="min-10" name="content" id="content" [(ngModel)]="selectArticle.content" placeholder="content"></textarea>
     </div>
 
+    <!-- Botón para guardar artículo -->
     <button class="btn" type="submit" > Save </button>
-    <button 
+    <!-- Botón para eliminar artículo, activo en caso de editar un artículo -->
+    <button  
       class="btn danger" 
       type="button" 
       *ngIf="selectArticle._id != 0" 
@@ -27,7 +35,7 @@
     > 
       Delete 
     </button>
-
+    <!-- Botón para ingresar nuevo artículo, activo en caso de editar un artículo -->
     <button 
       class="btn success" 
       type="button" 
@@ -38,7 +46,7 @@
     </button>
   </form>
 
-
+  <!-- Contenido que muestra todos los artículos -->
   <div class="articles">
     <button 
       class="btn box-shadow" 
@@ -46,6 +54,7 @@
       (click)="openForEdit(article)"
       [class.active] = "article == selectArticle"
     >
+      <!-- Componente que muestra informacion artículo -->
       <app-article-tag [article]="article" ></app-article-tag>
     </button>
   </div>

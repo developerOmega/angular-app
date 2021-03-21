@@ -1,14 +1,16 @@
 <div class="content">
 
   <form class="form box-shadow" action="/" method="post" (ngSubmit) = "submitSession()" >
-
+    <!-- Título de formulario -->
     <h2 class="title blue"> Log in </h2>
 
+    <!-- Columna de mail -->
     <div class="field">
       <label class="black" for="email"> Add email </label>
       <input type="email" [(ngModel)]="user.email" name="email" id="email" placeholder="Email">
     </div>
 
+    <!-- Columna de contraseña -->
     <div class="field">
       <label class="black" for="password"> Add password </label>
       <input type="password" [(ngModel)]="user.password" name="password" id="password" placeholder="Password">
